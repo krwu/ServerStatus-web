@@ -1,24 +1,50 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
+import React, { useState, useEffect } from 'react';
+import { Layout, Row, Col, Spin } from 'antd';
+import ServerRow from './ServerRow';
+
+const { Header, Footer, Content } = Layout;
+
 const App: React.FC = () => {
+  const [serverData, setServerData] = useState({servers: [], updated: "0"});
+  const [isOnline, setIsOnline] = useState(false);
+
+  useEffect(() => {
+    let fetchData = setInterval(() => {
+      fetch('json/stats.json')
+        .then(res => res.json())
+        .then(data => {
+          setServerData(data);
+          setIsOnline(true);
+          console.log(data);
+        })
+        .catch(e => console.log('错误:',e))
+    }, 2000);
+    return () => {
+      clearInterval(fetchData);
+    }
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Layout>
+        <Header>
+          <div className="logo">ServerStatus</div>
+        </Header>
+        <Content style={{background:'#fff'}}>
+          <Row type="flex" justify="center">
+            <Col xs={24} sm={23} md={23} lg={22} xl={20} xxl={16}>
+              <Spin size="large" spinning={!isOnline} tip="Loading...">
+                <ServerRow {...serverData} />
+              </Spin>
+            </Col>
+          </Row>
+        </Content>
+        <Footer className="footer">
+          &copy; 2019 <a href="https://www.ofcss.com/" rel="external noopener">裁纸刀下</a>
+        </Footer>
+      </Layout>
     </div>
   );
 }

@@ -2,20 +2,25 @@
   "name": "sergate",
   "version": "0.1.0",
   "private": true,
+  "homepage" : "https://udev.bid/sergate",
   "dependencies": {
     "@types/jest": "24.0.17",
     "@types/node": "12.7.1",
     "@types/react": "16.9.1",
     "@types/react-dom": "16.8.5",
+    "antd": "^3.21.4",
+    "babel-plugin-import": "^1.12.0",
+    "customize-cra": "^0.4.1",
     "react": "^16.9.0",
+    "react-app-rewired": "^2.1.3",
     "react-dom": "^16.9.0",
     "react-scripts": "3.1.0",
     "typescript": "3.5.3"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build && rm -rf build/json",
+    "test": "react-app-rewired test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
