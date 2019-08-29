@@ -42,7 +42,7 @@ const App: React.FC = () => {
           </Row>
         </Content>
         <Footer className="footer">
-          &copy; 2019 <a href="https://www.ofcss.com/" rel="external noopener">裁纸刀下</a>
+          <a href="https://udev.bid/sergate/" rel="external noopener">WebUI</a> for <a href="https://github.com/BotoX/ServerStatus/" rel="external noopener">ServerStatus</a>, made by <a href="https://www.ofcss.com/" rel="external noopener">Kairee</a> 
         </Footer>
       </Layout>
     </div>
