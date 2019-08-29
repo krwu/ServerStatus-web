@@ -8,6 +8,8 @@ This is a web ui for [BotoX's ServerStatus](https://github.com/BotoX/ServerStatu
 
 ## Useage:
 
+You MUST install and run [BotoX's ServerStatus](https://github.com/BotoX/ServerStatus/) first. This is just a drop-in replacement for its web interface.
+
 ### **With release version:**
 
 1. Download the latest prebuilt files on the [release page](https://github.com/krwu/ServerStatus-web/releases).
