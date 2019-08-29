@@ -1,8 +1,25 @@
 {
-  "name": "sergate",
-  "version": "0.1.0",
+  "name": "serverstatus-webui",
+  "version": "1.0.0",
+  "description": "It's a simple, clean webui for ServerStatus, built with react and Ant Design",
+  "keywords": [
+    "ServerStatus",
+    "Web UI",
+    "sergate",
+    "react",
+    "ant design"
+  ],
   "private": true,
-  "homepage" : "https://udev.bid/sergate",
+  "homepage": ".",
+  "bugs": {
+    "url": "https://github.com/krwu/ServerStatus-web/issues"
+  },
+  "license": "MIT",
+  "author": "Kairee <kairee@udev.bid> (https://www.ofcss.com/)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/krwu/ServerStatus-web.git"
+  },
   "dependencies": {
     "@types/jest": "24.0.17",
     "@types/node": "12.7.1",
