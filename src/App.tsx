@@ -42,7 +42,7 @@ const App: React.FC = () => {
           </Row>
         </Content>
         <Footer className="footer">
-          <a href="https://udev.bid/sergate/" rel="external noopener">WebUI</a> for <a href="https://github.com/BotoX/ServerStatus/" rel="external noopener">ServerStatus</a>, made by <a href="https://www.ofcss.com/" rel="external noopener">Kairee</a> 
+          <a href="https://github.com/krwu/ServerStatus-web" rel="external noopener">WebUI</a> for <a href="https://github.com/BotoX/ServerStatus/" rel="external noopener">ServerStatus</a>, made by <a href="https://www.ofcss.com/" rel="external noopener">Kairee</a> 
         </Footer>
       </Layout>
     </div>
