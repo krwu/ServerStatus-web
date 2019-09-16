@@ -1,6 +1,6 @@
 {
   "name": "serverstatus-webui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "It's a simple, clean webui for ServerStatus, built with react and Ant Design",
   "keywords": [
     "ServerStatus",
