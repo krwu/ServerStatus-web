@@ -39,7 +39,7 @@
     "build": "react-app-rewired build && rm -rf build/json",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject",
-    "commit": "git-cz",
+    "cz": "git-cz",
     "release": "standard-version"
   },
   "eslintConfig": {
