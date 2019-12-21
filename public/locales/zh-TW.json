@@ -1,0 +1,14 @@
+{
+  "NAME": "名稱",
+  "TYPE": "類型",
+  "LOC": "地區",
+  "UPTIME": "運行",
+  "LOAD": "負載",
+  "NETWORK": "網絡",
+  "CPU": "CPU",
+  "RAM": "RAM",
+  "HDD": "HDD",
+  "LOADING": "數據載入中...",
+  "WAIT": "正在從伺服器載入數據，請稍候...",
+  "LAST_UPDATE": "數據最後更新時間："
+}

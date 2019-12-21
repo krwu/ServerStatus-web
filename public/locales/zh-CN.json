@@ -1,0 +1,15 @@
+{
+  "NAME": "名称",
+  "TYPE": "类型",
+  "LOC": "地区",
+  "UPTIME": "运行",
+  "LOAD": "负载",
+  "NETWORK": "网络",
+  "CPU": "CPU",
+  "RAM": "RAM",
+  "HDD": "HDD",
+  "LOADING": "数据加载中...",
+  "WAIT": "正在首次从服务器端加载监控数据，请稍候...",
+  "LAST_UPDATE": "数据最后更新时间：{updatedTime}",
+  "DAYS": "天"
+}

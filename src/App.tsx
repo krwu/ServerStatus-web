@@ -1,12 +1,16 @@
 import './App.css';
 
+import intl from 'react-intl-universal';
 import React, { useState, useEffect } from 'react';
 import { Layout, Row, Col, Spin } from 'antd';
 import ServerRow from './ServerRow';
 
+require('intl/locale-data/jsonp/en.js');
+require('intl/locale-data/jsonp/zh.js');
+
 const { Header, Footer, Content } = Layout;
 
-const App: React.FC = () => {
+const App: React.FC = () => {  
   const [serverData, setServerData] = useState({servers: [], updated: "0"});
   const [isOnline, setIsOnline] = useState(false);
 
@@ -17,7 +21,6 @@ const App: React.FC = () => {
         .then(data => {
           setServerData(data);
           setIsOnline(true);
-          console.log(data);
         })
         .catch(e => console.log('错误:',e))
     }, 2000);
@@ -25,6 +28,30 @@ const App: React.FC = () => {
       clearInterval(fetchData);
     }
   }, []);
+
+  const [initDone, setInitDone] = useState(false);
+  let currentLocale = navigator.language || 'zh-CN';
+  if (currentLocale === 'zh-TW' || currentLocale === 'zh-HK') {
+    currentLocale = 'zh-TW';
+  } else if (currentLocale.startsWith('zh')) {
+    currentLocale = 'zh-CN';
+  } else {
+    currentLocale = 'en-US';
+  }
+  
+  initDone || fetch(`locales/${currentLocale}.json`)
+    .then(res => res.json())
+    .then(data => {
+      return intl.init({
+        currentLocale,
+        locales: {
+          [currentLocale]: data
+        }
+      });
+    })
+    .then(() => {
+      setInitDone(true);
+    });
 
   return (
     <div className="App">
@@ -35,9 +62,9 @@ const App: React.FC = () => {
         <Content style={{background:'#fff'}}>
           <Row type="flex" justify="center">
             <Col xs={24} sm={23} md={23} lg={22} xl={20} xxl={16}>
-              <Spin size="large" spinning={!isOnline} tip="Loading...">
+              {initDone ? (<Spin size="large" spinning={!isOnline} tip="Loading...">
                 <ServerRow {...serverData} />
-              </Spin>
+              </Spin>) : (<div />)}
             </Col>
           </Row>
         </Content>

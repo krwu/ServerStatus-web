@@ -1,0 +1,15 @@
+{
+  "NAME": "Name",
+  "TYPE": "Type",
+  "LOC": "Location",
+  "UPTIME": "Uptime",
+  "LOAD": "Load",
+  "NETWORK": "Network",
+  "CPU": "CPU",
+  "RAM": "RAM",
+  "HDD": "HDD",
+  "LOADING": "Data loading...",
+  "WAIT": "Loading data from the server, please wait for a while...",
+  "LAST_UPDATE": "Last updated: {relativeTime}",
+  "DAYS": "days"
+}

@@ -1,3 +1,4 @@
+import intl from 'react-intl-universal';
 import React, { ReactNode } from 'react';
 import { Row, Col, Tag, Progress, Tooltip, Alert } from 'antd';
 
@@ -35,7 +36,7 @@ function onlineTag(online: boolean, label: string): React.ReactElement {
 
 function transUptime(uptime: string): string {
   uptime = uptime || '';
-  return uptime.replace('days', '天');
+  return uptime.replace('days', intl.get('DAYS'));
 }
 
 function networkUnit(network: number): string {
@@ -86,6 +87,16 @@ function memTips(props: RawData): ReactNode {
   </dl>);
 }
 
+function formatDateTime(time: Date) {
+  const year = time.getFullYear();
+  const month = ((time.getMonth() + 1) + '').padStart(2, '0');
+  const day = (time.getDate() + '').padStart(2, '0');
+  const hour = (time.getHours() + '').padStart(2, '0');
+  const minute = (time.getMinutes() + '').padStart(2, '0');
+  const second = (time.getSeconds() + '').padStart(2, '0');
+  return `${year}-${month}-${day} ${hour}:${minute}:${second}`;
+}
+
 const Flag: React.FC<{ loc: string}> = ({ loc }) => (
   <i className={`flag-icon flag-icon-${loc.toLowerCase()}`}></i>
 )
@@ -95,21 +106,22 @@ const ServerRow: React.FC<SergateData> = (props) => {
 
   servers = servers || [];
   updated = updated || '0';
-  const updatedTime = parseInt(updated) * 1000;
+  let updatedInt = parseInt(updated) * 1000;
+  let updatedTime = formatDateTime(new Date(updatedInt));
 
   return (<div className="sergate">
     <Row className="sr-head" type="flex" justify="space-around" gutter={8}>
       <Col xs={3} sm={3} md={1} lg={1}>IPv4</Col>
       <Col xs={0} sm={0} md={0} lg={1}>IPv6</Col>
-      <Col xs={3} sm={3} md={3} lg={2}>节点</Col>
-      <Col xs={3} sm={3} md={2} lg={2}>类型</Col>
-      <Col xs={3} sm={2} md={2} lg={2}>地区</Col>
-      <Col xs={3} sm={4} md={3} lg={2}>运行</Col>
-      <Col xs={0} sm={0} md={0} lg={2}>负载</Col>
-      <Col xs={0} sm={0} md={4} lg={3}>网络</Col>
-      <Col xs={3} sm={3} md={3} lg={3}>CPU</Col>
-      <Col xs={3} sm={3} md={3} lg={3}>RAM</Col>
-      <Col xs={3} sm={3} md={3} lg={3}>HDD</Col>
+      <Col xs={3} sm={3} md={3} lg={2}>{intl.get('NAME')}</Col>
+      <Col xs={3} sm={3} md={2} lg={2}>{intl.get('TYPE')}</Col>
+      <Col xs={3} sm={2} md={2} lg={2}>{intl.get('LOC')}</Col>
+      <Col xs={3} sm={4} md={3} lg={2}>{intl.get('UPTIME')}</Col>
+      <Col xs={0} sm={0} md={0} lg={2}>{intl.get('LOAD')}</Col>
+      <Col xs={0} sm={0} md={4} lg={3}>{intl.get('NETWORK')}</Col>
+      <Col xs={3} sm={3} md={3} lg={3}>{intl.get('CPU')}</Col>
+      <Col xs={3} sm={3} md={3} lg={3}>{intl.get('RAM')}</Col>
+      <Col xs={3} sm={3} md={3} lg={3}>{intl.get('HDD')}</Col>
     </Row>
     {servers && servers.length > 0 ? servers.map(server => (
       <Row key={server.host} className="sr-body" type="flex" justify="center" gutter={resGutter}>
@@ -138,10 +150,10 @@ const ServerRow: React.FC<SergateData> = (props) => {
     )) : <Alert
     showIcon={true}
     type="info"
-    message="数据加载中"
-    description="正在首次从服务器段加载监控数据，请稍候。"
+    message={intl.get('LOADING')}
+    description={intl.get('WAIT')}
   />}
-    {updatedTime > 0 && <Alert className="lastUpdated" type="info" message={'数据最后更新时间：'+new Date(updatedTime).toISOString()} />}
+    {updatedInt > 0 && <Alert className="lastUpdated" type="info" message={intl.get('LAST_UPDATE', {updatedTime})} />}
     </div>)
   };
 
