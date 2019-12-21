@@ -10,5 +10,6 @@
   "HDD": "HDD",
   "LOADING": "數據載入中...",
   "WAIT": "正在從伺服器載入數據，請稍候...",
-  "LAST_UPDATE": "數據最後更新時間："
+  "LAST_UPDATE": "數據最後更新時間：{updatedTime}",
+  "DAYS": "天"
 }

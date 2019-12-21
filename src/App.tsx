@@ -27,7 +27,7 @@ const App: React.FC = () => {
     return () => {
       clearInterval(fetchData);
     }
-  }, []);
+  });
 
   const [initDone, setInitDone] = useState(false);
   let currentLocale = navigator.language || 'zh-CN';

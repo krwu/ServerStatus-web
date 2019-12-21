@@ -10,6 +10,6 @@
   "HDD": "HDD",
   "LOADING": "Data loading...",
   "WAIT": "Loading data from the server, please wait for a while...",
-  "LAST_UPDATE": "Last updated: {relativeTime}",
+  "LAST_UPDATE": "Last updated: {updatedTime}",
   "DAYS": "days"
 }
