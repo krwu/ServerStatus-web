@@ -1,13 +1,15 @@
 # Web UI for ServerStatus
 
+**English** | [简体中文](README.zh-CN.md) | [繁體中文](README.zh-TW.md)
+
 This is a web ui for [BotoX's ServerStatus](https://github.com/BotoX/ServerStatus/).
 
-[![GitHub](https://img.shields.io/github/license/krwu/ServerStatus-web)](https://github.com/krwu/ServerStatus-web/blob/master/COPYING.txt)
+[![Build Status](https://travis-ci.com/krwu/ServerStatus-web.svg?branch=master)](https://travis-ci.com/krwu/ServerStatus-web)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/krwu/ServerStatus-Web)
 [![GitHub All Releases](https://img.shields.io/github/downloads/krwu/ServerStatus-web/total)](https://github.com/krwu/ServerStatus-web/releases)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
-[![Build Status](https://travis-ci.org/krwu/auto-release.svg?branch=master)](https://travis-ci.org/krwu/auto-release)
-
+[![GitHub](https://img.shields.io/github/license/krwu/ServerStatus-web)](https://github.com/krwu/ServerStatus-web/blob/master/COPYING.txt)
+![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/krwu/ServerStatus-Web/react)
 
 
 ## Live demo:
