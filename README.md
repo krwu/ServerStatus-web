@@ -2,7 +2,12 @@
 
 This is a web ui for [BotoX's ServerStatus](https://github.com/BotoX/ServerStatus/).
 
+[![GitHub](https://img.shields.io/github/license/krwu/ServerStatus-web)](https://github.com/krwu/ServerStatus-web/blob/master/COPYING.txt)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/krwu/ServerStatus-Web)
+[![GitHub All Releases](https://img.shields.io/github/downloads/krwu/ServerStatus-web/total)](https://github.com/krwu/ServerStatus-web/releases)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
+
+
 
 ## Live demo:
 
