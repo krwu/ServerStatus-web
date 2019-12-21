@@ -23,7 +23,7 @@
       {
         "assets": {
           "path": "sergate.zip",
-          "name": "sergate-${nextRelease.gitTag}.zip"
+          "name": "sergate-${nextRelease.version}.zip"
         }
       }
   ],
