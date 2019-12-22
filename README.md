@@ -1,6 +1,6 @@
 # Web UI for ServerStatus
 
-**English** | [简体中文](README.zh-CN.md) | [繁體中文](README.zh-TW.md)
+**English** | [简体中文](README.zh_CN.md) | [繁體中文](README.zh_TW.md)
 
 This is a web ui for [BotoX's ServerStatus](https://github.com/BotoX/ServerStatus/).
 
