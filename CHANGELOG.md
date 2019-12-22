@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/krwu/ServerStatus-web/compare/v1.1.0...v1.1.1) (2019-12-22)
+
+
+### Bug Fixes
+
+* add missed locale entities ([88245b6](https://github.com/krwu/ServerStatus-web/commit/88245b68d90373870cd7b9b000c2dcb85af3fad0))
+
 # [1.1.0](https://github.com/krwu/ServerStatus-web/compare/v1.0.1...v1.1.0) (2019-12-21)
 
 
