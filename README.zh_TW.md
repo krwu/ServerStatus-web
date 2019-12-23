@@ -14,7 +14,7 @@
 
 ## 演示：
 
-[HTTPs://udev.bid/sergate/]（HTTPs://udev.bid/sergate/）
+[htts://udev.bid/sergate/](https://udev.bid/sergate/)
 
 ## 使用方法：
 
