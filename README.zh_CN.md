@@ -40,3 +40,11 @@
     npm run build
     ```
 6. 把 `build` 目录下的所有文件上传到你的 ServerStatus 的 web 目录（推荐操作：你可以先删除**原目录**下除了 `json/status.json` 以外的所有文件）。
+
+---
+
+## 特别鸣谢
+
+[![Jetbrains Logo](https://x.webdn.net/share/jetbrains.svg)](https://www.jetbrains.com/?from=WebUiForServerStatus)
+
+非常感谢 [Jetbrains](https://www.jetbrains.com/?from=WebUiForServerStatus) 对这个小小开源项目的支持！我一直是 PhpStorm 和 WebStorm 的死忠粉，它们是最棒的开发工具。

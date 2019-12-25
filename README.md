@@ -43,3 +43,10 @@ You MUST install and run [BotoX's ServerStatus](https://github.com/BotoX/ServerS
     ```
 6. Copy all files in the `build` directory to your web directory of ServerStatus(you can delete all files except `json/status.json` in it, this is recommended).
 
+---
+
+## Special thanks
+
+[![Jetbrains Logo](https://x.webdn.net/share/jetbrains.svg)](https://www.jetbrains.com/?from=WebUiForServerStatus)
+
+Thanks to [Jetbrains](https://www.jetbrains.com/?from=WebUiForServerStatus) for supporting this small open source project! I used WebStorm and PhpStorm for years, they are the best tools!
