@@ -14,7 +14,7 @@
   "bugs": {
     "url": "https://github.com/krwu/ServerStatus-web/issues"
   },
-  "license": "MIT",
+  "license": "WTFPL",
   "author": "Kairee <kairee@udev.bid> (https://www.ofcss.com/)",
   "repository": {
     "type": "git",
