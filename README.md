@@ -47,6 +47,6 @@ You MUST install and run [BotoX's ServerStatus](https://github.com/BotoX/ServerS
 
 ## Special thanks
 
-[![Jetbrains Logo](https://x.webdn.net/share/jetbrains.svg)](https://www.jetbrains.com/?from=WebUiForServerStatus)
+[![Jetbrains Logo](https://krwu.github.io/img/jetbrains.svg)](https://www.jetbrains.com/?from=WebUiForServerStatus)
 
 Thanks to [Jetbrains](https://www.jetbrains.com/?from=WebUiForServerStatus) for supporting this small open source project! I used WebStorm and PhpStorm for years, they are the best tools!

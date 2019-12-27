@@ -45,6 +45,6 @@
 
 ## 特别鸣谢
 
-[![Jetbrains Logo](https://x.webdn.net/share/jetbrains.svg)](https://www.jetbrains.com/?from=WebUiForServerStatus)
+[![Jetbrains Logo](https://krwu.github.io/img/jetbrains.svg)](https://www.jetbrains.com/?from=WebUiForServerStatus)
 
 非常感谢 [Jetbrains](https://www.jetbrains.com/?from=WebUiForServerStatus) 对这个小小开源项目的支持！我一直是 PhpStorm 和 WebStorm 的死忠粉，它们是最棒的开发工具。
