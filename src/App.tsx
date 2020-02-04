@@ -23,7 +23,7 @@ const App: React.FC = () => {
           setIsOnline(true);
         })
         .catch(e => console.log('错误:',e))
-    }, 2000);
+    }, 5000);
     return () => {
       clearInterval(fetchData);
     }
