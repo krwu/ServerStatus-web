@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/krwu/ServerStatus-web/compare/v1.1.1...v1.1.2) (2020-02-04)
+
+
+### Performance Improvements
+
+* **data:** improve fetch interval from 2s to 5s ([4bd86e3](https://github.com/krwu/ServerStatus-web/commit/4bd86e3f7b18fd33054cbddeae185bc5cde6338e))
+
 ## [1.1.1](https://github.com/krwu/ServerStatus-web/compare/v1.1.0...v1.1.1) (2019-12-22)
 
 
