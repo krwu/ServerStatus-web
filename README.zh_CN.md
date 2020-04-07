@@ -1,6 +1,6 @@
 # Web UI for ServerStatus
 
-[English](README.md) | **简体中文** | [繁體中文](README.zh_TW.md)
+[English](README.md) | **简体中文**
 
 本项目是为 [BotoX's ServerStatus](https://github.com/BotoX/ServerStatus/) 开发的前端展示界面.
 
@@ -32,13 +32,13 @@
 3. 进入项目根目录（或解压后的文件夹）。
 4. 通过 npm(推荐) 或者 yarn 安装依赖项。
 5. 执行 `npm run build` 来编译 web 文件：
-    ``` bash
-    git clone https://github.com/krwu/ServerStatus-web.git
-    cd ./ServerStatus-web/
-    ## 你也可以用 yarn 代替下面的 npm
-    npm i
-    npm run build
-    ```
+   ```bash
+   git clone https://github.com/krwu/ServerStatus-web.git
+   cd ./ServerStatus-web/
+   ## 你也可以用 yarn 代替下面的 npm
+   npm i
+   npm run build
+   ```
 6. 把 `build` 目录下的所有文件上传到你的 ServerStatus 的 web 目录（推荐操作：你可以先删除**原目录**下除了 `json/status.json` 以外的所有文件）。
 
 ---

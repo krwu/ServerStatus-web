@@ -1,6 +1,6 @@
 # Web UI for ServerStatus
 
-**English** | [简体中文](README.zh_CN.md) | [繁體中文](README.zh_TW.md)
+**English** | [简体中文](README.zh_CN.md)
 
 This is a web ui for [BotoX's ServerStatus](https://github.com/BotoX/ServerStatus/).
 
@@ -9,8 +9,6 @@ This is a web ui for [BotoX's ServerStatus](https://github.com/BotoX/ServerStatu
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/krwu/serverstatus-web.svg)
 [![downloads](https://img.shields.io/github/downloads/krwu/ServerStatus-web/total)](https://github.com/krwu/ServerStatus-web/releases)
 [![GitHub](https://img.shields.io/github/license/krwu/ServerStatus-web)](https://github.com/krwu/ServerStatus-web/blob/master/COPYING.txt)
-
-
 
 ## Live demo:
 
@@ -34,13 +32,14 @@ You MUST install and run [BotoX's ServerStatus](https://github.com/BotoX/ServerS
 4. Install dependecies with npm / yarn.
 5. Run `npm run build` to build web files.
 
-    ``` bash
-    git clone https://github.com/krwu/ServerStatus-web.git
-    cd ./ServerStatus-web/
-    ## you can also run "yarn" instead of the next command
-    npm i
-    npm run build
-    ```
+   ```bash
+   git clone https://github.com/krwu/ServerStatus-web.git
+   cd ./ServerStatus-web/
+   ## you can also run "yarn" instead of the next command
+   npm i
+   npm run build
+   ```
+
 6. Copy all files in the `build` directory to your web directory of ServerStatus(you can delete all files except `json/status.json` in it, this is recommended).
 
 ---
