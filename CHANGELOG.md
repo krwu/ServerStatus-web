@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/krwu/ServerStatus-web/compare/v1.1.2...v1.1.3) (2020-04-09)
+
+
+### Bug Fixes
+
+* pull data once page loaded instead of wait 5m ([f244dec](https://github.com/krwu/ServerStatus-web/commit/f244decff163a847ee9da3999b352a33f554c15b))
+
 ## [1.1.2](https://github.com/krwu/ServerStatus-web/compare/v1.1.1...v1.1.2) (2020-02-04)
 
 
