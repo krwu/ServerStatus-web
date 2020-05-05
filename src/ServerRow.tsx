@@ -127,7 +127,7 @@ const ServerRow: React.FC<SergateData> = (props) => {
       <Row key={server.host} className="sr-body" type="flex" justify="center" gutter={resGutter}>
         <Col xs={3} sm={3} md={1} lg={1}>{ onlineTag(server.online4, 'IPv4') }</Col>
         <Col xs={0} sm={0} md={0} lg={1}>{ onlineTag(server.online6, 'IPv6') }</Col>
-        <Col xs={3} sm={3} md={3} lg={2}>{ server.host }</Col>
+        <Col xs={3} sm={3} md={3} lg={2}>{ server.host || server.name }</Col>
         <Col xs={3} sm={3} md={2} lg={2}>{ server.type }</Col>
         <Col xs={3} sm={2} md={2} lg={2}><Flag loc={ server.location } /></Col>
         <Col xs={3} sm={4} md={3} lg={2}>{ transUptime(server.uptime) }</Col>
