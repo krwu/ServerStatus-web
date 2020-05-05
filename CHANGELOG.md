@@ -1,3 +1,10 @@
+## [1.1.4](https://github.com/krwu/ServerStatus-web/compare/v1.1.3...v1.1.4) (2020-05-05)
+
+
+### Bug Fixes
+
+* display name with host or name from json ([a19256c](https://github.com/krwu/ServerStatus-web/commit/a19256c9e83345ec18916ce7620e57461228face)), closes [#2](https://github.com/krwu/ServerStatus-web/issues/2)
+
 ## [1.1.3](https://github.com/krwu/ServerStatus-web/compare/v1.1.2...v1.1.3) (2020-04-09)
 
 
