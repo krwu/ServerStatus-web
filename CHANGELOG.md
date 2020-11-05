@@ -1,3 +1,10 @@
+## [1.1.5](https://github.com/krwu/ServerStatus-web/compare/v1.1.4...v1.1.5) (2020-11-05)
+
+
+### Bug Fixes
+
+* locale ('1 day' doesn't work), mobile style ('name' item size) ([cf5c3b6](https://github.com/krwu/ServerStatus-web/commit/cf5c3b6638400203f694d1776488057dfbf42e87))
+
 ## [1.1.4](https://github.com/krwu/ServerStatus-web/compare/v1.1.3...v1.1.4) (2020-05-05)
 
 
