@@ -54,6 +54,9 @@ body {
 }
 
 @media (max-width: 768px) {
+  .logo {
+    text-align: center;
+  }
   .sr-head {
     font-size: 0.8rem;
   }
