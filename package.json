@@ -70,7 +70,7 @@
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^2.5.1",
     "husky": "^4.3.0",
-    "semantic-release": "^15.13.24"
+    "semantic-release": "^17.2.3"
   },
   "husky": {
     "hooks": {
