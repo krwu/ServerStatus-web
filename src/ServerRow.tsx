@@ -4,8 +4,12 @@
 import intl from 'react-intl-universal';
 import React, { ReactNode } from 'react';
 import {
-  Row, Col, Tag, Progress, Tooltip, Alert,
+  Row, Col, Progress, Tooltip, Alert,
 } from 'antd';
+import {
+  CheckCircleFilled,
+  WarningFilled
+} from '@ant-design/icons';
 
 interface RawData {
   name: string;
@@ -33,12 +37,9 @@ interface SergateData {
   updated?: string;
 }
 
-const resGutter = {
-  xs: 8, sm: 16, md: 24, lg: 32,
-};
-
 function onlineTag(online: boolean, label: string): React.ReactElement {
-  return <Tag color={online ? '#87d068' : '#f50'}>{online ? 'O N' : 'OFF'}</Tag>;
+  //return <Tag color={online ? '#87d068' : '#f50'}>{online ? 'O N' : 'OFF'}</Tag>;
+  return online ? <CheckCircleFilled /> : <WarningFilled />;
 }
 
 function transUptime(uptime: string): string {
@@ -132,45 +133,45 @@ const ServerRow: React.FC<SergateData> = (props: SergateData) => {
 
   return (
     <div className="sergate">
-      <Row className="sr-head" type="flex" justify="space-around" gutter={8}>
+      <Row className="sr-head" justify="space-around" gutter={10}>
         <Col xs={3} sm={3} md={1} lg={1}>IPv4</Col>
-        <Col xs={0} sm={0} md={0} lg={1}>IPv6</Col>
-        <Col xs={5} sm={6} md={3} lg={2}>{intl.get('NAME')}</Col>
-        <Col xs={0} sm={0} md={2} lg={2}>{intl.get('TYPE')}</Col>
-        <Col xs={3} sm={2} md={1} lg={1}>{intl.get('LOC')}</Col>
+        <Col xs={0} sm={0} md={1} lg={1}>IPv6</Col>
+        <Col xs={5} sm={4} md={2} lg={2}>{intl.get('NAME')}</Col>
+        <Col xs={0} sm={2} md={2} lg={2}>{intl.get('TYPE')}</Col>
+        <Col xs={2} sm={2} md={1} lg={1}>{intl.get('LOC')}</Col>
         <Col xs={4} sm={4} md={3} lg={2}>{intl.get('UPTIME')}</Col>
         <Col xs={0} sm={0} md={0} lg={1}>{intl.get('LOAD')}</Col>
         <Col xs={0} sm={0} md={5} lg={4}>{intl.get('NETWORK')}</Col>
         <Col xs={3} sm={3} md={3} lg={3}>{intl.get('CPU')}</Col>
         <Col xs={3} sm={3} md={3} lg={3}>{intl.get('RAM')}</Col>
-        <Col xs={3} sm={3} md={3} lg={3}>{intl.get('HDD')}</Col>
+        <Col xs={4} sm={3} md={3} lg={3}>{intl.get('HDD')}</Col>
       </Row>
       {servers && servers.length > 0 ? servers.map((server) => (
-        <Row key={server.host} className="sr-body" type="flex" justify="center" gutter={resGutter}>
+        <Row key={server.host} className="sr-body" justify="space-around" gutter={10}>
           <span className="col-num">{idx++}</span>
           <Col xs={3} sm={3} md={1} lg={1}>{onlineTag(server.online4, 'IPv4')}</Col>
           <Col xs={0} sm={0} md={1} lg={1}>{onlineTag(server.online6, 'IPv6')}</Col>
-          <Col xs={5} sm={6} md={3} lg={2}>{server.host || server.name}</Col>
-          <Col xs={0} sm={0} md={2} lg={2}>{server.type}</Col>
-          <Col xs={3} sm={2} md={1} lg={1}><Flag loc={server.location} /></Col>
+          <Col xs={5} sm={4} md={2} lg={2}>{server.host || server.name}</Col>
+          <Col xs={0} sm={2} md={2} lg={2}>{server.type}</Col>
+          <Col xs={2} sm={2} md={1} lg={1}><Flag loc={server.location} /></Col>
           <Col xs={4} sm={4} md={3} lg={2}>{transUptime(server.uptime)}</Col>
-          <Col xs={0} sm={0} md={0} lg={2}>{server.load}</Col>
+          <Col xs={0} sm={0} md={0} lg={1}>{server.load}</Col>
           <Col xs={0} sm={0} md={5} lg={4}>
             {networkUnit(server.network_rx)}
             ↓ | ↑
             {networkUnit(server.network_tx)}
           </Col>
           <Col xs={3} sm={3} md={3} lg={3}>
-            <Progress strokeWidth={12} percent={server.cpu} status="active" />
+            <Progress className="sg-progress" strokeLinecap="square" strokeWidth={12} percent={server.cpu} status="active" />
           </Col>
           <Col xs={3} sm={3} md={3} lg={3}>
             <Tooltip placement="left" title={memTips(server)}>
-              <Progress strokeWidth={12} percent={parseFloat(((server.memory_used / server.memory_total) * 100).toFixed(1))} status="active" />
+              <Progress className="sg-progress" strokeLinecap="square" strokeWidth={12} percent={parseFloat(((server.memory_used / server.memory_total) * 100).toFixed(1))} status="active" />
             </Tooltip>
           </Col>
-          <Col xs={3} sm={3} md={3} lg={3}>
+          <Col xs={4} sm={3} md={3} lg={3}>
             <Tooltip placement="left" title={`${bytesToSize(server.hdd_used * 1024)}/${bytesToSize(server.hdd_total * 1024)}`}>
-              <Progress strokeWidth={12} percent={parseFloat(((server.hdd_used / server.hdd_total) * 100).toFixed(1))} status="active" />
+              <Progress className="sg-progress" strokeLinecap="square" strokeWidth={12} percent={parseFloat(((server.hdd_used / server.hdd_total) * 100).toFixed(1))} status="active" />
             </Tooltip>
           </Col>
         </Row>

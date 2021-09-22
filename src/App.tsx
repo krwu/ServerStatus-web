@@ -62,7 +62,7 @@ const App: React.FC = () => {
           <div className="logo">ServerStatus</div>
         </Header>
         <Content style={{ background: "#fff" }}>
-          <Row type="flex" justify="center">
+          <Row justify="center">
             <Col xs={24} sm={23} md={23} lg={22} xl={20} xxl={16}>
               {initDone ? (
                 <Spin size="large" spinning={!isOnline} tip="Loading...">

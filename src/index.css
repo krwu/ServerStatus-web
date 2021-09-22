@@ -10,12 +10,15 @@ body {
 .sergate {
   margin: 16px 0;
 }
-.sergate .ant-row-flex {
+.sergate .ant-row {
   position: relative;
   flex-wrap: nowrap;
 }
+.sergate .sg-progress .ant-progress-outer {
+  margin-right: calc(-3em - 8px);
+  padding-right: calc(3em + 8px);
+}
 .sr-head {
-  font-weight: bold;
   padding-top: 8px;
   padding-bottom: 8px;
 }
@@ -40,6 +43,14 @@ body {
 .sergate .lastUpdated {
   margin-top: 16px;
   text-align: center;
+}
+
+.sergate .anticon-check-circle {
+  color: #389e0d;
+}
+
+.sergate .anticon-warning {
+  color: #cf1322;
 }
 
 .ant-layout .footer {
@@ -73,13 +84,20 @@ body {
   .sr-body .ant-col {
     font-size: 0.8rem;
   }
+  .sergate .ant-tag {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 900px) {
   .sergate .ant-col .ant-progress-outer {
     display: none;
   }
   .sergate .ant-col .ant-progress-text {
     margin-left: 0;
   }
-  .sergate .ant-tag {
-    margin-right: 0;
+
+  .sr-head {
+    font-size: 12px;
   }
 }
