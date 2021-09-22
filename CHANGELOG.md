@@ -1,3 +1,16 @@
+# [1.2.0](https://github.com/krwu/ServerStatus-web/compare/v1.1.5...v1.2.0) (2021-09-22)
+
+
+### Bug Fixes
+
+* ignore local registry ([15158f4](https://github.com/krwu/ServerStatus-web/commit/15158f4c8d1523f2d2983a5bbf164660113211be))
+* serviceWorker cause building failed ([bc548af](https://github.com/krwu/ServerStatus-web/commit/bc548af585014c29f2621c98599d63c4955c83ee))
+
+
+### Features
+
+* **ui:** add index for each row ([1c0fbfe](https://github.com/krwu/ServerStatus-web/commit/1c0fbfe86ea034d2bda0c32cc861bef52accac7d))
+
 ## [1.1.5](https://github.com/krwu/ServerStatus-web/compare/v1.1.4...v1.1.5) (2020-11-05)
 
 
