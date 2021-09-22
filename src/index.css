@@ -1,7 +1,6 @@
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB',
-  'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji',
-  'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
 .logo {
   color: #fff;
@@ -11,7 +10,10 @@ body {
 .sergate {
   margin: 16px 0;
 }
-
+.sergate .ant-row-flex {
+  position: relative;
+  flex-wrap: nowrap;
+}
 .sr-head {
   font-weight: bold;
   padding-top: 8px;
@@ -25,6 +27,14 @@ body {
   padding-top: 8px;
   padding-bottom: 8px;
   border-top: 1px solid #ebebeb;
+}
+.col-num {
+  position: absolute;
+  width: 16px;
+  line-height: 40px;
+  left: -16px;
+  top: 0;
+  text-align: right;
 }
 
 .sergate .lastUpdated {
@@ -70,6 +80,6 @@ body {
     margin-left: 0;
   }
   .sergate .ant-tag {
-    margin-right:0;
+    margin-right: 0;
   }
 }
