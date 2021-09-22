@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/krwu/ServerStatus-web/compare/v1.2.0...v1.3.0) (2021-09-22)
+
+
+### Features
+
+* bump antd version to 4.0 ([664003d](https://github.com/krwu/ServerStatus-web/commit/664003df1bf2d2f4eed04cc0334dcb22db0baa31))
+
 # [1.2.0](https://github.com/krwu/ServerStatus-web/compare/v1.1.5...v1.2.0) (2021-09-22)
 
 
