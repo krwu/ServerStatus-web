@@ -38,12 +38,7 @@
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
-    "eject": "react-scripts eject",
-    "cz": "git-cz",
-    "prepare": "husky install"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+    "eject": "react-scripts eject"
   },
   "browserslist": {
     "production": [
@@ -58,11 +53,8 @@
     ]
   },
   "devDependencies": {
-    "@commitlint/cli": "^13.1.0",
-    "@commitlint/config-conventional": "^13.1.0",
     "@semantic-release/changelog": "^6.0.0",
     "@semantic-release/git": "^10.0.0",
-    "semantic-release": "^18.0.0",
-    "husky": "^7.0.0"
+    "semantic-release": "^18.0.0"
   }
 }
