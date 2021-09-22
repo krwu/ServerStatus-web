@@ -64,6 +64,5 @@
     "@semantic-release/git": "^10.0.0",
     "semantic-release": "^18.0.0",
     "husky": "^7.0.0"
-    "semantic-release": "^15.13.24"
   }
 }
