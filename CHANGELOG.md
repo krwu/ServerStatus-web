@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/krwu/ServerStatus-web/compare/v1.3.0...v1.4.0) (2022-02-19)
+
+
+### Features
+
+* upgrade dependencies ([c9a4f11](https://github.com/krwu/ServerStatus-web/commit/c9a4f11286bd6d4788a78853af81104940b62fff))
+
 # [1.3.0](https://github.com/krwu/ServerStatus-web/compare/v1.2.0...v1.3.0) (2021-09-22)
 
 
