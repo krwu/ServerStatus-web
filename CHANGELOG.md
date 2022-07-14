@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/krwu/ServerStatus-web/compare/v2.0.0...v2.0.1) (2022-07-14)
+
+
+### Performance Improvements
+
+* clean unnecessary packages ([d5a1dd0](https://github.com/krwu/ServerStatus-web/commit/d5a1dd007cecafe7b4461e98667410ae099b6e3d))
+
 # [2.0.0](https://github.com/krwu/ServerStatus-web/compare/v1.4.0...v2.0.0) (2022-06-14)
 
 
