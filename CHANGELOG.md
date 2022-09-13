@@ -1,3 +1,10 @@
+## [2.0.2](https://github.com/krwu/ServerStatus-web/compare/v2.0.1...v2.0.2) (2022-09-13)
+
+
+### Bug Fixes
+
+* **npm:** potential security vulnerabilities ([10db0cb](https://github.com/krwu/ServerStatus-web/commit/10db0cbb2d37d2be7a43e9279c2c60099237c1fa))
+
 ## [2.0.1](https://github.com/krwu/ServerStatus-web/compare/v2.0.0...v2.0.1) (2022-07-14)
 
 
