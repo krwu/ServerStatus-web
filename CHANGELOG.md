@@ -1,3 +1,10 @@
+## [2.0.3](https://github.com/krwu/ServerStatus-web/compare/v2.0.2...v2.0.3) (2023-03-07)
+
+
+### Bug Fixes
+
+* http-cache-semantics vulnerable ([dac1abc](https://github.com/krwu/ServerStatus-web/commit/dac1abc1112c6a6388f691e7697bb0dc5fd93558))
+
 ## [2.0.2](https://github.com/krwu/ServerStatus-web/compare/v2.0.1...v2.0.2) (2022-09-13)
 
 
