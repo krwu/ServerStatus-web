@@ -4,7 +4,7 @@
 
 This is a web ui for [BotoX's ServerStatus](https://github.com/BotoX/ServerStatus/).
 
-[![Build Status](https://travis-ci.com/krwu/ServerStatus-web.svg?branch=master)](https://travis-ci.com/krwu/ServerStatus-web)
+[![Build Status](https://app.travis-ci.com/krwu/ServerStatus-web.svg?token=ewwsqHUp5uN7kb98qTjg&branch=master)](https://app.travis-ci.com/github/krwu/ServerStatus-web)
 [![codebeat badge](https://codebeat.co/badges/038ea692-7cec-47dc-add2-2a59b6a5d89c)](https://codebeat.co/projects/github-com-krwu-serverstatus-web-master)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/krwu/serverstatus-web.svg)
 [![downloads](https://img.shields.io/github/downloads/krwu/ServerStatus-web/total)](https://github.com/krwu/ServerStatus-web/releases)

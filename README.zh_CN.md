@@ -4,7 +4,7 @@
 
 本项目是为 [BotoX's ServerStatus](https://github.com/BotoX/ServerStatus/) 开发的前端展示界面.
 
-[![Build Status](https://travis-ci.com/krwu/ServerStatus-web.svg?branch=master)](https://travis-ci.com/krwu/ServerStatus-web)
+[![Build Status](https://app.travis-ci.com/krwu/ServerStatus-web.svg?token=ewwsqHUp5uN7kb98qTjg&branch=master)](https://app.travis-ci.com/github/krwu/ServerStatus-web)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/krwu/ServerStatus-Web)
 [![GitHub All Releases](https://img.shields.io/github/downloads/krwu/ServerStatus-web/total)](https://github.com/krwu/ServerStatus-web/releases)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
