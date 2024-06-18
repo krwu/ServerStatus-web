@@ -1,8 +1,8 @@
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-unused-vars */
 /* eslint-disable camelcase */
-import intl from 'react-intl-universal';
 import React, { ReactNode } from 'react';
+import intl from 'react-intl-universal';
 import {
   Row, Col, Progress, Tooltip, Alert,
 } from 'antd';

@@ -1,20 +1,60 @@
 import "./App.css";
 
 import intl from "react-intl-universal";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { Layout, Row, Col, Spin } from "antd";
+
+import zhCN from './locales/zh-CN.json';
+import enUS from './locales/en-US.json';
 
 import ServerRow from "./ServerRow";
 
-require("intl/locale-data/jsonp/en.js");
-require("intl/locale-data/jsonp/zh.js");
-
 const { Header, Footer, Content } = Layout;
 
-const App: React.FC = () => {
+const LOCALE_DATA = {
+  "en-US": enUS,
+  "zh-CN": zhCN,
+};
+
+const App: React.FC<any> = () => {
   const [serverData, setServerData] = useState({ servers: [], updated: "0" });
   const [isOnline, setIsOnline] = useState(false);
+  const [initDone, setInitDone] = useState(false);
+
+  const setCurrentLocale = (currentLocale: string) => {
+    intl.init({
+      // debug: true,
+      currentLocale,
+      locales: LOCALE_DATA,
+    });
+  };
+
+  const initializeIntl = useCallback(() => {
+    if (initDone) {
+      return
+    }
+    // 1. Get the currentLocale from url, cookie, or browser setting
+    let currentLocale = intl.determineLocale({
+      fallbackLocale: 'en-US',
+    });
+
+    // 2. Fallback to "en-US" if the currentLocale isn't supported in LOCALES_LIST
+    if (currentLocale.startsWith("zh-")) {
+      currentLocale = "zh-CN";
+    } else {
+      currentLocale = "en-US";
+    }
+
+    // 3. Set currentLocale and load locale data 
+    setCurrentLocale(currentLocale);
+
+    // 4. After loading locale data, start to render
+    setInitDone(true);
+  }, [initDone])
+  
+
   useEffect(() => {
+    initializeIntl()
     const fetchData = () => {
       fetch("json/stats.json")
         .then((res) => res.json())
@@ -29,36 +69,11 @@ const App: React.FC = () => {
     return () => {
       clearInterval(itv);
     };
-  }, []);
-
-  const [initDone, setInitDone] = useState(false);
-  let currentLocale = navigator.language || "zh-CN";
-  if (currentLocale === "zh-TW" || currentLocale === "zh-HK") {
-    currentLocale = "zh-TW";
-  } else if (currentLocale.startsWith("zh")) {
-    currentLocale = "zh-CN";
-  } else {
-    currentLocale = "en-US";
-  }
-
-  initDone ||
-    fetch(`locales/${currentLocale}.json`)
-      .then((res) => res.json())
-      .then((data) => {
-        return intl.init({
-          currentLocale,
-          locales: {
-            [currentLocale]: data,
-          },
-        });
-      })
-      .then(() => {
-        setInitDone(true);
-      });
+  }, [initializeIntl]);
 
   return (
     <div className="App">
-      <Layout>
+      {initDone && (<Layout>
         <Header>
           <div className="logo">ServerStatus</div>
         </Header>
@@ -95,6 +110,7 @@ const App: React.FC = () => {
           </a>
         </Footer>
       </Layout>
+      )}
     </div>
   );
 };
