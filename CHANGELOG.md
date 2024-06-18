@@ -1,3 +1,15 @@
+# [3.0.0](https://github.com/krwu/ServerStatus-web/compare/v2.0.3...v3.0.0) (2024-06-18)
+
+
+### Build System
+
+* **npm:** change required node engine from 18 to 20 ([3d034e2](https://github.com/krwu/ServerStatus-web/commit/3d034e2ee305f1c3331bf539603d0052101cd597))
+
+
+### BREAKING CHANGES
+
+* **npm:** the lowest supported node version change to v20.
+
 ## [2.0.3](https://github.com/krwu/ServerStatus-web/compare/v2.0.2...v2.0.3) (2023-03-07)
 
 
